@@ -1,0 +1,10 @@
+{
+    "name": "Urban Dictionary Search",
+    "version": "0.0",
+    "description": "Search Urban Dictionary definitions anywhere on the web!",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "manifest_version": 2
+  }
