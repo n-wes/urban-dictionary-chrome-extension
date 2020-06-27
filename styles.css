@@ -3,6 +3,7 @@
 body {
   min-width: 420px;
   min-height: 129.5px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 18px;
   color: #333;
   display: grid;
@@ -20,6 +21,24 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 5px;
+}
+
+#search-results {
+  overflow: auto;
+  max-height: 200px;
+  margin: 10px 10px;
+  display: grid;
+  row-gap: 10px;
+  font-size: 13px;
+}
+
+.def-panel {
+  display: grid;
+  row-gap: 10px;
+}
+
+.def-header {
+  font-size: 20px;
 }
 
 .gtx-footer {
