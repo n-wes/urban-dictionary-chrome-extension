@@ -1,29 +1,29 @@
 {
-    "name": "Urban Dictionary Search",
-    "version": "0.0",
-    "description": "Search Urban Dictionary definitions anywhere on the web!",
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-    "browser_action": {
-        "default_popup": "popup.html"
-    },
-    "permissions": [
-        "tabs",
-        "http://*/*",
-        "https://*/*"
-    ],
-    "icons": {
-        "16": "assets/ud16.png",
-        "32": "assets/ud32.png",
-        "48": "assets/ud48.png",
-        "64": "assets/ud64.png",
-        "96": "assets/ud96.png",
-        "128": "assets/ud128.png"
-    },
-    "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
-    "manifest_version": 2
-  }
+  "name": "Urban Dictionary Search",
+  "version": "0.0.1",
+  "description": "Search Urban Dictionary definitions anywhere on the web!",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+      "default_popup": "popup.html"
+  },
+  "permissions": [
+      "tabs",
+      "http://*/*",
+      "https://*/*"
+  ],
+  "icons": {
+      "16": "assets/ud16.png",
+      "32": "assets/ud32.png",
+      "48": "assets/ud48.png",
+      "64": "assets/ud64.png",
+      "96": "assets/ud96.png",
+      "128": "assets/ud128.png"
+  },
+  "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
+  "manifest_version": 2
+}
