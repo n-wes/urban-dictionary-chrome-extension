@@ -5,7 +5,7 @@ const searchResults = document.getElementById('search-results')
 const showResults = data => {
     if (!data || !data.length) {
         console.log('here')
-        return '<p>No results found<p/>'
+        return '<p>No results found</p>'
     }
     else {
         dataHTML = data.map(res => {
@@ -31,10 +31,10 @@ searchInput.addEventListener('keyup', e => {
 })
 
 searchButton.addEventListener('click', () => {
+    searchResults.innerHTML = 'Searching...'
     axios.get(`http://urbanscraper.herokuapp.com/search/${searchInput.value}`)
         .then(res => {
             searchResults.innerHTML = showResults(res.data)
         }) 
-        .catch(err => searchResults.innerHTML = `<p>${err}<p/>`)
+        .catch(err => searchResults.innerHTML = `<p>${err}</p>`)
 })
-
