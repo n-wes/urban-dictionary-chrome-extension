@@ -2,7 +2,7 @@
 
 body {
   min-width: 420px;
-  min-height: 129.5px;
+  min-height: 120px;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 18px;
   color: #333;
@@ -29,7 +29,7 @@ body {
 
 #search-results {
   overflow: auto;
-  max-height: 200px;
+  max-height: 400px;
   margin: 10px 10px;
   display: grid;
   row-gap: 10px;
