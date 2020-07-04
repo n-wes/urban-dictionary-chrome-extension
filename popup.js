@@ -3,18 +3,32 @@ const searchInput = document.getElementById('search-input')
 const searchResults = document.getElementById('search-results')
 
 const showResults = data => {
-    if (data === []) {
+    if (!data || !data.length) {
+        console.log('here')
         return '<p>No results found<p/>'
     }
-
-    // let results = data.map(res)
+    else {
+        dataHTML = data.map(res => {
+            const date = new Date(res.posted)
+            return `
+                <div class="def-panel">
+                    <div class="def-header">${res.term}</div>
+                    <div class="meaning">${res.definition}</div>
+                    <div class="example">${res.example}</div>
+                    <div class="contributor">by <a href="${res.author_url}" target="_blank">${res.author}</a> on ${date.toDateString()}</div>
+                </div>
+                `
+        })
+        return dataHTML.join('')
+    }
 }
 
 searchButton.addEventListener('click', () => {
     axios.get(`http://urbanscraper.herokuapp.com/search/${searchInput.value}`)
         .then(res => {
             console.log(res.data)
+            searchResults.innerHTML = showResults(res.data)
         }) 
-        .catch(err => {console.log(err)})
+        .catch(err => searchResults.innerHTML = `<p>${err}<p/>`)
 })
 

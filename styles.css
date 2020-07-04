@@ -23,6 +23,10 @@ body {
   gap: 5px;
 }
 
+#search-input {
+  padding: 5px;
+}
+
 #search-results {
   overflow: auto;
   max-height: 200px;
@@ -30,6 +34,11 @@ body {
   display: grid;
   row-gap: 10px;
   font-size: 13px;
+}
+
+.def-panel a {
+  color: blue;
+  text-decoration: none;
 }
 
 .def-panel {
