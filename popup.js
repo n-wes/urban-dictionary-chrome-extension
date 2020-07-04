@@ -23,10 +23,16 @@ const showResults = data => {
     }
 }
 
+searchInput.addEventListener('keyup', e => {
+    if (e.keyCode === 13) {
+        e.preventDefault()
+        searchButton.click()
+    }
+})
+
 searchButton.addEventListener('click', () => {
     axios.get(`http://urbanscraper.herokuapp.com/search/${searchInput.value}`)
         .then(res => {
-            console.log(res.data)
             searchResults.innerHTML = showResults(res.data)
         }) 
         .catch(err => searchResults.innerHTML = `<p>${err}<p/>`)
