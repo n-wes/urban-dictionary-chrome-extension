@@ -6,9 +6,7 @@
       "default_popup": "popup.html"
   },
   "permissions": [
-      "tabs",
-      "http://*/*",
-      "https://*/*"
+    "http://urbanscraper.herokuapp.com/"
   ],
   "icons": {
       "16": "assets/ud16.png",
